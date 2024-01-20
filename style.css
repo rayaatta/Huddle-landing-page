@@ -14,8 +14,8 @@
 }
 body {
     min-height:100vh;
-    background-color: var(--violet);
     background-image: url(./bg-mobile.svg);
+    background-color: var(--violet);
     background-repeat: no-repeat;
     position: relative;
     display: flex;
@@ -97,7 +97,7 @@ a:hover {
         text-align: left;
     }
     body {
-        background-image: url(bg-desktop.svg);
+        background-image: url(./bg-desktop.svg);
     }
     header {
         width:90%;
