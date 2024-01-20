@@ -97,7 +97,7 @@ a:hover {
         text-align: left;
     }
     body {
-        background-image: url(./bg-desktop.svg);
+        background-image: url(bg-desktop.svg);
     }
     header {
         width:90%;
