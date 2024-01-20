@@ -1,0 +1,169 @@
+/*# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Violet: hsl(257, 40%, 49%)
+- Soft Magenta: hsl(300, 69%, 71%)
+
+## Typography
+
+### Headings
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 600
+
+### Body
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400
+
+## Icons
+
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/)
+*/
+:root {
+    --violet:hsl(257, 40%, 49%);
+    --soft-magenta:hsl(300, 69%, 71%);
+}
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 400;
+}
+body {
+    min-height:100vh;
+    background-color: var(--violet);
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+header {
+    margin-block: 2rem;
+    width:80%;
+}
+.logo {
+    width:8rem;
+}
+main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 2rem;
+    width: 80%;
+}
+img {
+    display:block;
+    max-width: 100%;;
+}
+.mockups {
+   margin-block-end: 2rem;
+}
+h2 {
+    margin-block: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+button {
+    color: var(--violet);
+    background: white;
+    border-radius:1.5rem ;
+    width:min(70%,11rem);
+    cursor: pointer;
+    border: none;
+    padding-block: .7rem;
+    margin-block: 1rem;
+    transition-duration: .2s;
+}
+button:hover {
+    background: var(--soft-magenta);
+    color:#fff;
+}
+main::after {
+    transition-property: width;
+    transition-duration: 10s;
+    transition-timing-function: linear;
+    height: 2px;
+    width:0;
+    content: "";
+    background-color: var(--soft-magenta);
+}
+main:has(button:hover)::after {
+    transition-duration: 1s;
+    width:calc(100% - 2rem);
+}
+footer {
+    margin-block: 1rem;
+    display:flex;
+    justify-content: center;
+    width:80%;
+}
+a {
+    margin-inline-end: 1rem;
+}
+a:hover {
+    color:var(--soft-magenta);
+}
+@media screen and (min-width:600px) {
+    *:not(button) {
+        text-align: left;
+    }
+    body {
+        background-image: url(images/bg-desktop.svg);
+    }
+    header {
+        width:90%;
+    }
+    main:has(button:hover)::after {
+        transition-duration: 1s;
+        width:0;
+    }
+    .logo {
+        width:9rem;
+    }
+    h1 {
+        display:none;
+    }
+    main {
+        flex-direction:row;
+        width:90%;
+        align-items: flex-start;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+    .mockups {
+        width:calc(50% - 1rem);
+        margin-right: 1rem;
+    }
+    article {
+        width:calc(50% - 1rem);
+        margin-left: 1rem;
+    }
+    footer {
+        justify-content: flex-end;
+        width:90%;
+    }
+}
