@@ -30,8 +30,8 @@ header {
 .logo {
     width:8rem;
 }
- h1 {
-        display:none;
+h1 {
+     display:none;
     }
 main {
     display:flex;
@@ -97,7 +97,7 @@ a:hover {
         text-align: left;
     }
     body {
-        background-image: url(images/bg-desktop.svg);
+        background-image: url(./bg-desktop.svg);
     }
     header {
         width:90%;
