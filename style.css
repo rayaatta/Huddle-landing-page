@@ -89,7 +89,7 @@ footer {
 a {
     margin-inline-end: 1rem;
 }
-a:hover {
+a:hover > i {
     color:var(--soft-magenta);
 }
 @media screen and (min-width:600px) {
