@@ -51,7 +51,7 @@ For the social icons, you can use a font icon library. Some suggestions can be f
 body {
     min-height:100vh;
     background-color: var(--violet);
-    background-image: url(images/bg-mobile.svg);
+    background-image: url(./bg-mobile.svg);
     background-repeat: no-repeat;
     position: relative;
     display: flex;
